@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/fragment_view_padding"
+    tools:context=".ui.fragments.SetAlarmFragment">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/set_alarm_iv_h_w"
+        android:layout_height="@dimen/set_alarm_iv_h_w"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+    <ImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="@dimen/set_alarm_iv_h_w"
+        android:layout_height="@dimen/set_alarm_iv_h_w"
+        android:src="@drawable/ic_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="0dp"
+        android:layout_height="212dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="0.6"
+        android:timePickerMode="spinner"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivClose" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+
+
+            <LinearLayout
+                android:id="@+id/llDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMonday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="M"
+                    android:textSize="@dimen/letters_days_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="T"
+                    android:textSize="@dimen/letters_days_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvWednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="W"
+                    android:textSize="@dimen/letters_days_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvThursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="T"
+                    android:textSize="@dimen/letters_days_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvFriday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="F"
+                    android:textSize="@dimen/letters_days_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSaturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="S"
+                    android:textSize="@dimen/letters_days_text_size"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvSunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="S"
+                    android:textSize="@dimen/letters_days_text_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:id="@+id/tvRingtonLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ringtone"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"/>
+                <TextView
+                    android:id="@+id/tvRingtonChose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Default(BusyBugs)"
+                    android:textSize="14sp"
+
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tvVibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Vibrate"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumb="@drawable/switch_thumb"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:track="@drawable/switch_track" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

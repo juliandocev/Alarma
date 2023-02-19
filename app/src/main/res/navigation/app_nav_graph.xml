@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/alarmsFragment">
+
+    <action android:id="@+id/action_global_ring_fragment"
+        app:destination="@id/ringFragment"
+        app:launchSingleTop="true"/> <!-- It makes sure tha we don't launch new instance of the activity -->
+
+    <fragment
+        android:id="@+id/alarmsFragment"
+        android:name="com.judot.alarma.ui.fragments.AlarmsFragment"
+        android:label="AlarmsFragment" >
+        <action
+            android:id="@+id/action_alarmsFragment_to_setAlarmFragment"
+            app:destination="@id/setAlarmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/worldClockFragment"
+        android:name="com.judot.alarma.ui.fragments.WorldClockFragment"
+        android:label="WorldClockFragment" />
+    <fragment
+        android:id="@+id/countdownFragment"
+        android:name="com.judot.alarma.ui.fragments.CountdownFragment"
+        android:label="CountdownFragment" />
+    <fragment
+        android:id="@+id/stopwatchFragment"
+        android:name="com.judot.alarma.ui.fragments.StopwatchFragment"
+        android:label="StopwatchFragment" />
+    <fragment
+        android:id="@+id/setAlarmFragment"
+        android:name="com.judot.alarma.ui.fragments.SetAlarmFragment"
+        android:label="fragment_set_alarm"
+        tools:layout="@layout/fragment_set_alarm" />
+    <fragment
+        android:id="@+id/ringFragment"
+        android:name="com.judot.alarma.ui.fragments.RingFragment"
+        android:label="RingFragment" >
+    </fragment>
+</navigation>

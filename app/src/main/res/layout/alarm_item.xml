@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llAlarmClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_alarm_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="36sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/llDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="24dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvAlarmMonday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:text="M"
+                        android:textSize="@dimen/letters_days_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAlarmTuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:text="T"
+                        android:textSize="@dimen/letters_days_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAlarmWednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:text="W"
+                        android:textSize="@dimen/letters_days_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAlarmThursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:text="T"
+                        android:textSize="@dimen/letters_days_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAlarmFriday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:text="F"
+                        android:textSize="@dimen/letters_days_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAlarmSaturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:text="S"
+                        android:textSize="@dimen/letters_days_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAlarmSunday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:text="S"
+                        android:textSize="@dimen/letters_days_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/grey" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/switch_thumb"
+                app:track="@drawable/switch_track" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="85dp"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="#F00"
+        >
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/white"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</LinearLayout>
